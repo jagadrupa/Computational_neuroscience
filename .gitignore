@@ -1,0 +1,24 @@
+# ---- OS ----
+.DS_Store
+
+# ---- LaTeX build artifacts ----
+*.aux
+*.fdb_latexmk
+*.fls
+*.log
+*.out
+*.toc
+*.lof
+*.lot
+*.bbl
+*.blg
+*.synctex.gz
+
+# ---- Third-party course materials (not redistributed) ----
+Introduction_and_basic_neurobiology/lectures/
+Introduction_and_basic_neurobiology/STAtutorial.pdf
+Introduction_and_basic_neurobiology/math_tutorial_1_functions_are_vectors.pdf
+
+# ---- Source and figures kept local; only the built PDF is published ----
+Introduction_and_basic_neurobiology/compneuro_notes.tex
+Introduction_and_basic_neurobiology/figs/
