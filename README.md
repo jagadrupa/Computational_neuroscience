@@ -52,7 +52,15 @@ The recurring theme is that these are the same problem seen from different sides
 
 📄 **[compneuro_notes.pdf](01_basic_neurobiology/compneuro_notes.pdf)**
 
-The three levels of modelling (descriptive, mechanistic, interpretive) worked through receptive fields · neurons, ionic channels, and the action potential · synapses and Hebbian learning · spike-timing dependent plasticity · organization of the nervous system · the cortex as a layered sheet · neural vs. digital computing.
+*Lecture 1 — what computational neuroscience is.* The goal of the field · recording from a neuron in an intact brain · receptive fields as the worked example · the descriptive model, or *what* receptive fields look like.
+
+*Lecture 2 — mechanistic and interpretive models.* *How* receptive fields are built, from LGN input to V1 in the Hubel and Wiesel model · *why* they are shaped that way · the efficient coding hypothesis · learning receptive fields from natural images · the three levels side by side.
+
+*Lecture 3 — the neuron.* The neuronal zoo and the idealized neuron · the membrane potential · ionic channels as gatekeepers · the action potential, its propagation along the axon, and myelination.
+
+*Lecture 4 — synapses and plasticity.* The synapse · the synaptic doctrine and how brains learn · Hebbian learning · spike-timing dependent plasticity · what remains unknown.
+
+*Lecture 5 — the nervous system.* Peripheral and central nervous system · a tour of the brain · the cerebral cortex as a layered sheet · neural versus digital computing.
 
 ### 02 — Neural Encoding
 
