@@ -96,6 +96,10 @@ The recurring theme is that these are the same problem seen from different sides
 
 *Lecture 2 — computing information from data.* Chopping spike trains into binary words · total and noise entropy from repeats of a frozen stimulus · ergodicity, or averaging over time instead of over stimuli · the LGN worked example and its 2 ms resolution limit · undersampling bias and extrapolation in 1/L · information per spike from the rate ratio, with no coding model required · what timing precision and mean rate each contribute · place fields.
 
+*Lecture 3 — coding efficiency.* The dynamic range and power-law scaling of natural stimuli · histogram equalisation, or why the input/output curve should be the cumulative integral of the stimulus distribution · Laughlin's test in the fly · real-time adaptation, and the collapse of response curves when the input is normalised by its standard deviation · feature adaptation and the retinal filter from differentiating to integrating · redundancy reduction and why correlations are not simply waste · sparse coding and the emergence of V1-like receptive fields.
+
+*The graded quiz — theory against data.* Entropy and mutual information worked by hand · four simulated cricket cercal neurons · identifying the half-wave rectified cosine tuning curve from its flat zeros · the Fano factor test for Poisson firing, and why converting rates to counts is the whole question · decoding a mystery stimulus with the population vector.
+
 ## Code
 
 | File | What it does |
@@ -104,4 +108,6 @@ The recurring theme is that these are the same problem seen from different sides
 | [sta_analysis.ipynb](02_neural_encoding/sta_analysis.ipynb) | Computing an STA from the fly H1 recording and reading what it says about the neuron |
 | [make_figs.py](03_neural_decoding/make_figs.py) | Generates the decoding figures that are not on the slides — the evidence walk, the prior shift, ML vs MAP |
 | [decoding_quiz.ipynb](03_neural_decoding/decoding_quiz.ipynb) | Likelihood ratio test with asymmetric costs, solved analytically and by brute force as a check |
+| [tuning_curves.ipynb](04_information_theory_and_neural_coding/tuning_curves.ipynb) | Cricket cercal analysis: tuning curve shape, the Fano factor test for Poisson firing, and the population vector |
+| [make_figs.py](04_information_theory_and_neural_coding/make_figs.py) | Generates the quiz figures in the information theory notes from the supplied data |
 
