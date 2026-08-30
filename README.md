@@ -97,13 +97,3 @@ The three levels of modelling (descriptive, mechanistic, interpretive) worked th
 | [make_figs.py](03_neural_decoding/make_figs.py) | Generates the decoding figures that are not on the slides — the evidence walk, the prior shift, ML vs MAP |
 | [decoding_quiz.ipynb](03_neural_decoding/decoding_quiz.ipynb) | Likelihood ratio test with asymmetric costs, solved analytically and by brute force as a check |
 
-## Building
-
-Each folder holds the LaTeX source alongside its PDF:
-
-```bash
-cd 02_neural_encoding
-latexmk -pdf neural_encoding_notes.tex
-```
-
-LaTeX sources and figures are kept local, so the `.tex` files are not in the repo — the built PDFs above are the readable output. Lecture slides, videos, transcripts and course datasets are third-party material and are not redistributed here.
