@@ -24,12 +24,11 @@ subtitle*.txt
 *.srt
 *.vtt
 
-# ---- Source and figures kept local; only built PDFs are published ----
+# ---- Source and figures kept local; the built notes PDFs are published ----
 *.tex
 figs/
 
-# ---- Built notes PDFs kept local, not published ----
-*_notes.pdf
+# ---- Misc ----
 basisfunctions.pdf
 *.listing
 *.bak

@@ -88,6 +88,15 @@ The three levels of modelling (descriptive, mechanistic, interpretive) worked th
 
 *Lecture 2 — computing information from data.* Chopping spike trains into binary words · total and noise entropy from repeats of a frozen stimulus · ergodicity, or averaging over time instead of over stimuli · the LGN worked example and its 2 ms resolution limit · undersampling bias and extrapolation in 1/L · information per spike from the rate ratio, with no coding model required · what timing precision and mean rate each contribute · place fields.
 
+## Code
+
+| File | What it does |
+|---|---|
+| [compute_sta.py](02_neural_encoding/compute_sta.py) | Spike-triggered average, annotated line by line, with a worked ten-step example and a runnable demo |
+| [sta_analysis.ipynb](02_neural_encoding/sta_analysis.ipynb) | Computing an STA from the fly H1 recording and reading what it says about the neuron |
+| [make_figs.py](03_neural_decoding/make_figs.py) | Generates the decoding figures that are not on the slides — the evidence walk, the prior shift, ML vs MAP |
+| [decoding_quiz.ipynb](03_neural_decoding/decoding_quiz.ipynb) | Likelihood ratio test with asymmetric costs, solved analytically and by brute force as a check |
+
 ## Building
 
 Each folder holds the LaTeX source alongside its PDF:
@@ -97,4 +106,4 @@ cd 02_neural_encoding
 latexmk -pdf neural_encoding_notes.tex
 ```
 
-LaTeX sources, figures, lecture slides, tutorial PDFs, and the built notes PDFs are all kept locally and not published here.
+LaTeX sources and figures are kept local, so the `.tex` files are not in the repo — the built PDFs above are the readable output. Lecture slides, videos, transcripts and course datasets are third-party material and are not redistributed here.
