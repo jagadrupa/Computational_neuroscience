@@ -14,11 +14,22 @@
 *.blg
 *.synctex.gz
 
-# ---- Third-party course materials (not redistributed) ----
-Introduction_and_basic_neurobiology/lectures/
-Introduction_and_basic_neurobiology/STAtutorial.pdf
-Introduction_and_basic_neurobiology/math_tutorial_1_functions_are_vectors.pdf
+# ---- Third-party course materials (not redistributed, any folder) ----
+lectures/
+lecture*.pdf
+STAtutorial.pdf
+math_tutorial*.pdf
+subtitle*.txt
+*.pickle
+*.srt
+*.vtt
 
-# ---- Source and figures kept local; only the built PDF is published ----
-Introduction_and_basic_neurobiology/compneuro_notes.tex
-Introduction_and_basic_neurobiology/figs/
+# ---- Source and figures kept local; only built PDFs are published ----
+*.tex
+figs/
+
+# ---- Built notes PDFs kept local, not published ----
+*_notes.pdf
+basisfunctions.pdf
+*.listing
+*.bak
