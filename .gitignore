@@ -24,7 +24,8 @@ subtitle*.txt
 *.srt
 *.vtt
 Solving the RC circuit equations.pdf
-Suppl Mat*.pdf
+Suppl*.pdf
+*Lecture Notes*.pdf
 
 # ---- Source and figures kept local; the built notes PDFs are published ----
 *.tex

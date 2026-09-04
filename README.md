@@ -134,6 +134,8 @@ The recurring theme is that these are the same problem seen from different sides
 
 *Lecture 3 — sparse coding and predictive coding.* Eigenfaces, and why PCA compresses a million pixels into ten numbers but cannot extract local parts · dropping orthogonality for an overcomplete dictionary with more features than pixels, and why that ambiguity is what the prior exists to resolve · Gaussian white noise making squared reconstruction error identical to log likelihood · sparse, super-Gaussian priors, which differ from a Gaussian almost entirely in the tails · the objective F trading reconstruction against sparseness, with neither extreme usable · gradient ascent, alternating an inference step and a learning step as EM does · the inference step as a recurrent network that predicts its own input, measures the error and corrects · the learning step as a Hebbian rule almost identical to Oja's, escaping PCA only because of the sparse prior · Olshausen and Field's result, where the learnt features resemble V1 simple-cell receptive fields — an interpretive model of why receptive fields take the form they do · and predictive coding, which assigns roles to the reciprocal feedforward and feedback connections of visual cortex: errors up, predictions down.
 
+*The graded quiz — Hebbian learning in practice.* Reading the principal eigenvector off a correlation matrix, and why only the direction is determined · what a converged weight vector does and does not tell you about the data · the learning rate as a single knob controlling both adaptation speed and noise sensitivity · why EM must alternate, and why monotonic improvement is not the same as global optimality · discretising Oja's rule and the constants that survive · implementing it on the Dayan and Abbott c10p1 data, where it converges to one of two unit vectors along the principal axis · what goes wrong without mean-centring, and the two traps in testing that · and the pure Hebb rule, which finds the same direction while its length runs to 10^100.
+
 ## Code
 
 | File | What it does |
@@ -150,6 +152,7 @@ The recurring theme is that these are the same problem seen from different sides
 | [recurrent_steady_state.ipynb](06_computing_with_networks/recurrent_steady_state.ipynb) | Steady state of a recurrent network by direct solve and by eigendecomposition, and why eigh is required |
 | [make_figs.py](06_computing_with_networks/make_figs.py) | Generates the network quiz figures — image filters, row sums, the t_peak sweep and the reversal potential |
 | [make_figs.py](07_networks_that_learn--plasticity_in_the_brain_and_learning/make_figs.py) | Simulates every computed figure in the Week 7 notes — the three Hebbian rules, competitive learning, EM, and sparse coding on image patches |
+| [oja_rule.ipynb](07_networks_that_learn--plasticity_in_the_brain_and_learning/oja_rule.ipynb) | Oja's rule implemented and run on real data: the two solutions, the effect of not mean-centring, and pure Hebb compared against it |
 
 ## Building
 
