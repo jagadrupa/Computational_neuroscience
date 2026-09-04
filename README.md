@@ -136,6 +136,12 @@ The recurring theme is that these are the same problem seen from different sides
 
 *The graded quiz — Hebbian learning in practice.* Reading the principal eigenvector off a correlation matrix, and why only the direction is determined · what a converged weight vector does and does not tell you about the data · the learning rate as a single knob controlling both adaptation speed and noise sensitivity · why EM must alternate, and why monotonic improvement is not the same as global optimality · discretising Oja's rule and the constants that survive · implementing it on the Dayan and Abbott c10p1 data, where it converges to one of two unit vectors along the principal axis · what goes wrong without mean-centring, and the two traps in testing that · and the pure Hebb rule, which finds the same direction while its length runs to 10^100.
 
+### 08 — Learning from Supervision and Rewards
+
+📄 **[supervision_and_rewards_notes.pdf](08_learning_from_supervision_and_rewards/supervision_and_rewards_notes.pdf)**
+
+*Lecture 1 — neurons as classifiers and supervised learning.* Classification as geometry, with images as points in a space of as many dimensions as pixels · labels as the new ingredient, and what supervision assumes · the perceptron, which is week 1's idealised neuron with a name and a learning rule · why setting a weighted sum equal to a threshold defines a hyperplane, so the boundary is always flat · the learning rule driven by output error rather than by the neuron's own activity, and why the threshold moves opposite to the weights · XOR, which no perceptron can learn — a limit of representation, not of training · multilayer perceptrons, and the two-layer network that composes flat boundaries into a curved one · sigmoid units for regression, adopted for differentiability rather than realism · the delta rule for the output layer and backpropagation for the hidden layers via the chain rule · why backpropagation is hard to defend biologically, needing information no real synapse has · the difference between a network that cannot represent a function and one that merely fails to find it · and backing a truck into a loading dock, where imitation of a teacher is also a ceiling.
+
 ## Code
 
 | File | What it does |
@@ -153,6 +159,7 @@ The recurring theme is that these are the same problem seen from different sides
 | [make_figs.py](06_computing_with_networks/make_figs.py) | Generates the network quiz figures — image filters, row sums, the t_peak sweep and the reversal potential |
 | [make_figs.py](07_networks_that_learn--plasticity_in_the_brain_and_learning/make_figs.py) | Simulates every computed figure in the Week 7 notes — the three Hebbian rules, competitive learning, EM, and sparse coding on image patches |
 | [oja_rule.ipynb](07_networks_that_learn--plasticity_in_the_brain_and_learning/oja_rule.ipynb) | Oja's rule implemented and run on real data: the two solutions, the effect of not mean-centring, and pure Hebb compared against it |
+| [make_figs.py](08_learning_from_supervision_and_rewards/make_figs.py) | Perceptron learning, the XOR limit, sigmoid slopes, and backpropagation implemented from scratch |
 
 ## Building
 
