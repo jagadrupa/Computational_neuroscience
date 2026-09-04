@@ -166,14 +166,3 @@ The recurring theme is that these are the same problem seen from different sides
 | [make_figs.py](07_networks_that_learn--plasticity_in_the_brain_and_learning/make_figs.py) | Simulates every computed figure in the Week 7 notes — the three Hebbian rules, competitive learning, EM, and sparse coding on image patches |
 | [oja_rule.ipynb](07_networks_that_learn--plasticity_in_the_brain_and_learning/oja_rule.ipynb) | Oja's rule implemented and run on real data: the two solutions, the effect of not mean-centring, and pure Hebb compared against it |
 | [make_figs.py](08_learning_from_supervision_and_rewards/make_figs.py) | Perceptron learning, the XOR limit, sigmoid slopes, backpropagation, temporal difference learning, and the actor–critic algorithm, all implemented from scratch |
-
-## Building
-
-Each folder holds the LaTeX source alongside its PDF:
-
-```bash
-cd 02_neural_encoding
-latexmk -pdf neural_encoding_notes.tex
-```
-
-LaTeX sources and figures are kept local, so the `.tex` files are not in the repo — the built PDFs above are the readable output. Lecture slides, videos, transcripts and course datasets are third-party material and are not redistributed here.
