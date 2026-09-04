@@ -142,6 +142,8 @@ The recurring theme is that these are the same problem seen from different sides
 
 *Lecture 1 — neurons as classifiers and supervised learning.* Classification as geometry, with images as points in a space of as many dimensions as pixels · labels as the new ingredient, and what supervision assumes · the perceptron, which is week 1's idealised neuron with a name and a learning rule · why setting a weighted sum equal to a threshold defines a hyperplane, so the boundary is always flat · the learning rule driven by output error rather than by the neuron's own activity, and why the threshold moves opposite to the weights · XOR, which no perceptron can learn — a limit of representation, not of training · multilayer perceptrons, and the two-layer network that composes flat boundaries into a curved one · sigmoid units for regression, adopted for differentiability rather than realism · the delta rule for the output layer and backpropagation for the hidden layers via the chain rule · why backpropagation is hard to defend biologically, needing information no real synapse has · the difference between a network that cannot represent a function and one that merely fails to find it · and backing a truck into a loading dock, where imitation of a teacher is also a ceiling.
 
+*Lecture 2 — reinforcement learning: predicting rewards.* Reward as a weaker signal than supervision — it says how good an outcome was, not what should have been done, and it arrives late · classical conditioning as prediction, with Pavlov's bell coming to stand for the food · the predictor as a linear filter over a tapped delay line, week 2's machinery pointed at reward · why the obvious error function cannot be computed, since it needs rewards that have not happened yet · Bellman's recursive rewrite, replacing the unavailable future with the network's own estimate · the temporal difference rule and its prediction error δ = r(t) + v(t+1) − v(t) · why bootstrapping on your own output is legitimate, given one real reward per update · the error migrating trial by trial from the reward back to the stimulus · and dopaminergic cells in the ventral tegmental area behaving like δ, including the dip below baseline when a predicted reward is withheld.
+
 ## Code
 
 | File | What it does |
@@ -159,7 +161,7 @@ The recurring theme is that these are the same problem seen from different sides
 | [make_figs.py](06_computing_with_networks/make_figs.py) | Generates the network quiz figures — image filters, row sums, the t_peak sweep and the reversal potential |
 | [make_figs.py](07_networks_that_learn--plasticity_in_the_brain_and_learning/make_figs.py) | Simulates every computed figure in the Week 7 notes — the three Hebbian rules, competitive learning, EM, and sparse coding on image patches |
 | [oja_rule.ipynb](07_networks_that_learn--plasticity_in_the_brain_and_learning/oja_rule.ipynb) | Oja's rule implemented and run on real data: the two solutions, the effect of not mean-centring, and pure Hebb compared against it |
-| [make_figs.py](08_learning_from_supervision_and_rewards/make_figs.py) | Perceptron learning, the XOR limit, sigmoid slopes, and backpropagation implemented from scratch |
+| [make_figs.py](08_learning_from_supervision_and_rewards/make_figs.py) | Perceptron learning, the XOR limit, sigmoid slopes, backpropagation, and temporal difference learning, all implemented from scratch |
 
 ## Building
 
