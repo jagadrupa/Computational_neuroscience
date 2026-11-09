@@ -35,3 +35,16 @@ figs/
 basisfunctions.pdf
 *.listing
 *.bak
+
+# Solutions kept out of the public repo
+02_neural_encoding/compute_sta.py
+02_neural_encoding/sta_analysis.ipynb
+03_neural_decoding/decoding_quiz.ipynb
+04_information_theory_and_neural_coding/tuning_curves.ipynb
+04_information_theory_and_neural_coding/make_figs.py
+05_compuating_in_carbon/integrate_and_fire.ipynb
+05_compuating_in_carbon/rc_membrane.ipynb
+06_computing_with_networks/alpha_synapse.ipynb
+06_computing_with_networks/recurrent_steady_state.ipynb
+06_computing_with_networks/make_figs.py
+07_networks_that_learn--plasticity_in_the_brain_and_learning/oja_rule.ipynb
