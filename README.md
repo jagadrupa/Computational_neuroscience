@@ -2,6 +2,8 @@
 
 My study notes for computational neuroscience, written in LaTeX.
 
+> **About this public copy.** These are my own notes on the University of Washington *Computational Neuroscience* course (Coursera, completed 4 Sep 2026). Lecture slides, quiz questions and assessment solutions have been removed, in line with the [Coursera Honor Code](https://www.coursera.support/s/article/learner-000001214?language=en_US). The figures that remain are my own plots and simulations.
+
 ## The course in brief
 
 Four questions, each building on the last:
@@ -74,7 +76,6 @@ The recurring theme is that these are the same problem seen from different sides
 
 *Part IV — From firing rates to spikes.* Bernoulli to binomial to Poisson · Fano factor and interval distributions · where Poisson breaks · generalized linear models · the time-rescaling theorem.
 
-*Part V — The graded quiz: theory against data.* Computing a spike-triggered average from a real fly H1 recording, and reading what it says about the neuron.
 
 ### 03 — Neural Decoding
 
@@ -98,7 +99,6 @@ The recurring theme is that these are the same problem seen from different sides
 
 *Lecture 3 — coding efficiency.* The dynamic range and power-law scaling of natural stimuli · histogram equalisation, or why the input/output curve should be the cumulative integral of the stimulus distribution · Laughlin's test in the fly · real-time adaptation, and the collapse of response curves when the input is normalised by its standard deviation · feature adaptation and the retinal filter from differentiating to integrating · redundancy reduction and why correlations are not simply waste · sparse coding and the emergence of V1-like receptive fields.
 
-*The graded quiz — theory against data.* Entropy and mutual information worked by hand · four simulated cricket cercal neurons · identifying the half-wave rectified cosine tuning curve from its flat zeros · the Fano factor test for Poisson firing, and why converting rates to counts is the whole question · decoding a mystery stimulus with the population vector.
 
 ### 05 — Computing in Carbon
 
@@ -122,7 +122,6 @@ The recurring theme is that these are the same problem seen from different sides
 
 *Lecture 3 — recurrent networks.* Decoupling the network by writing the output in the eigenvector basis of a symmetric M · eigenvalues setting stability, with any λ > 1 causing the linear network to explode · amplification by 1/(1−λ₁), selectively along one eigenvector · cosine connectivity, exciting nearby and inhibiting distant neurons as cortex appears to · λ = 1 turning a mode into an integrator that holds a memory of past input, as real eye-position neurons do · rectification keeping a network with λ₁ = 1.9 stable, and enabling winner-take-all selection, gain modulation and working-memory persistence · non-symmetric excitatory–inhibitory circuits analysed through the Jacobian · and one time constant carrying the network from a point attractor through a Hopf bifurcation to a limit cycle.
 
-*The graded quiz — networks in practice.* Reading a weight matrix as an image filter, and using row sums to tell dimming, blurring, edge detection and blocking apart · what the firing-rate abstraction discards, which turns out to be everything about time and nothing about magnitude · the alpha synapse, where t_peak raises the firing rate sublinearly by slowing the synaptic conductance rather than the membrane · why inhibition is E_syn below threshold rather than below zero, and shunting inhibition as the case in between · and solving a recurrent network directly as (I − M)⁻¹Wu, with a warning about eigenvector degeneracy.
 
 ### 07 — Networks that Learn: Plasticity in the Brain and Learning
 
@@ -134,7 +133,6 @@ The recurring theme is that these are the same problem seen from different sides
 
 *Lecture 3 — sparse coding and predictive coding.* Eigenfaces, and why PCA compresses a million pixels into ten numbers but cannot extract local parts · dropping orthogonality for an overcomplete dictionary with more features than pixels, and why that ambiguity is what the prior exists to resolve · Gaussian white noise making squared reconstruction error identical to log likelihood · sparse, super-Gaussian priors, which differ from a Gaussian almost entirely in the tails · the objective F trading reconstruction against sparseness, with neither extreme usable · gradient ascent, alternating an inference step and a learning step as EM does · the inference step as a recurrent network that predicts its own input, measures the error and corrects · the learning step as a Hebbian rule almost identical to Oja's, escaping PCA only because of the sparse prior · Olshausen and Field's result, where the learnt features resemble V1 simple-cell receptive fields — an interpretive model of why receptive fields take the form they do · and predictive coding, which assigns roles to the reciprocal feedforward and feedback connections of visual cortex: errors up, predictions down.
 
-*The graded quiz — Hebbian learning in practice.* Reading the principal eigenvector off a correlation matrix, and why only the direction is determined · what a converged weight vector does and does not tell you about the data · the learning rate as a single knob controlling both adaptation speed and noise sensitivity · why EM must alternate, and why monotonic improvement is not the same as global optimality · discretising Oja's rule and the constants that survive · implementing it on the Dayan and Abbott c10p1 data, where it converges to one of two unit vectors along the principal axis · what goes wrong without mean-centring, and the two traps in testing that · and the pure Hebb rule, which finds the same direction while its length runs to 10^100.
 
 ### 08 — Learning from Supervision and Rewards
 
@@ -146,23 +144,11 @@ The recurring theme is that these are the same problem seen from different sides
 
 *Lecture 3 — reinforcement learning: time for action.* Policies as state-to-action mappings, and the goal of maximising expected total future reward · the rat in the barn, with state values worked out by hand and then learnt online by the same TD rule · values as surrogate immediate rewards, which is what lets an agent choose between actions whose payoffs lie far ahead · why greedy choice is globally optimal in Markov environments, and how much that guarantee assumes · the actor–critic algorithm, splitting policy evaluation from policy improvement with one prediction error driving both · softmax action selection, and β as the dial between exploration and exploitation · why the rarely-visited state fails to converge once the policy commits elsewhere · the proposed mapping onto the basal ganglia with dopamine as the prediction error · and autonomous helicopter flight, where inferring the objective from demonstrations beats imitating them.
 
-*The graded quiz — choosing and designing a learning problem.* What each paradigm is actually given, and why a label and a reward are different things · six scenarios matched to paradigms, arranged in pairs that use the same data for different ends — so the paradigm follows from what accompanies the data rather than from the data itself · sparse versus shaped reward · the perceptron evaluated by hand, where one dominant weight makes the output ignore its other input · why increasing a weight can lower the weighted sum, when the input is negative · learning-rate decay as the guarantee that training terminates, and why terminating is not the same as being correct · values in a maze modified by teleportation, where a state's value depends only on what follows it · and reward design, where penalising time and penalising distance differ by exactly one free action.
 
 ## Code
 
 | File | What it does |
 |---|---|
-| [compute_sta.py](02_neural_encoding/compute_sta.py) | Spike-triggered average, annotated line by line, with a worked ten-step example and a runnable demo |
-| [sta_analysis.ipynb](02_neural_encoding/sta_analysis.ipynb) | Computing an STA from the fly H1 recording and reading what it says about the neuron |
 | [make_figs.py](03_neural_decoding/make_figs.py) | Generates the decoding figures that are not on the slides — the evidence walk, the prior shift, ML vs MAP |
-| [decoding_quiz.ipynb](03_neural_decoding/decoding_quiz.ipynb) | Likelihood ratio test with asymmetric costs, solved analytically and by brute force as a check |
-| [tuning_curves.ipynb](04_information_theory_and_neural_coding/tuning_curves.ipynb) | Cricket cercal analysis: tuning curve shape, the Fano factor test for Poisson firing, and the population vector |
-| [make_figs.py](04_information_theory_and_neural_coding/make_figs.py) | Generates the quiz figures in the information theory notes from the supplied data |
-| [rc_membrane.ipynb](05_compuating_in_carbon/rc_membrane.ipynb) | The passive membrane equation integrated numerically, and how τ = RC sets the response |
-| [integrate_and_fire.ipynb](05_compuating_in_carbon/integrate_and_fire.ipynb) | Leaky integrate-and-fire with a current sweep, from silence through threshold to saturation |
-| [alpha_synapse.ipynb](06_computing_with_networks/alpha_synapse.ipynb) | An alpha-function synapse driving an integrate-and-fire cell: sweeping t_peak and the reversal potential |
-| [recurrent_steady_state.ipynb](06_computing_with_networks/recurrent_steady_state.ipynb) | Steady state of a recurrent network by direct solve and by eigendecomposition, and why eigh is required |
-| [make_figs.py](06_computing_with_networks/make_figs.py) | Generates the network quiz figures — image filters, row sums, the t_peak sweep and the reversal potential |
 | [make_figs.py](07_networks_that_learn--plasticity_in_the_brain_and_learning/make_figs.py) | Simulates every computed figure in the Week 7 notes — the three Hebbian rules, competitive learning, EM, and sparse coding on image patches |
-| [oja_rule.ipynb](07_networks_that_learn--plasticity_in_the_brain_and_learning/oja_rule.ipynb) | Oja's rule implemented and run on real data: the two solutions, the effect of not mean-centring, and pure Hebb compared against it |
 | [make_figs.py](08_learning_from_supervision_and_rewards/make_figs.py) | Perceptron learning, the XOR limit, sigmoid slopes, backpropagation, temporal difference learning, and the actor–critic algorithm, all implemented from scratch |
